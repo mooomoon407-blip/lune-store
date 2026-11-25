@@ -2,10 +2,10 @@
    إعدادات متجر LUNÉ — هذا هو الملف الوحيد الذي تحتاجين تعديله
    ===================================================================== */
 window.LUNE_CONFIG = {
-  // من Supabase → Project Settings → API
-  // اتركيهما فارغين = «وضع المعاينة» (البيانات تُحفظ في متصفحك فقط)
-  SUPABASE_URL: "",        // مثال: https://abcdxyz.supabase.co
-  SUPABASE_ANON_KEY: "",   // مفتاح anon أو publishable (آمن للواجهة). لا تضعي service_role هنا أبداً
+  
+  
+  SUPABASE_URL: "https://ogyihzatabmqhuaprsah.supabase.co", 
+  SUPABASE_ANON_KEY: "sb_publishable_-UoErXSq0kL3zIWd58EXPw_cAb1pd88",   // مفتاح anon أو publishable (آمن للواجهة). لا تضعي service_role هنا أبداً
 
   STORE: {
     name: "LUNÉ",
