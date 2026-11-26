@@ -16,6 +16,14 @@
 <body class="adm">
 <div id="previewBar" class="preview-bar hidden">وضع المعاينة: البيانات محفوظة في هذا المتصفح فقط · <a href="index.html">فتح المتجر</a></div>
 <div id="app"><div class="loading"><div class="spin"></div></div></div>
-<script type="module" src="js/admin.js"></script>
+<script>
+  window.addEventListener('error', e => {
+    document.getElementById('app').innerHTML = `<pre style="padding:20px;color:#900;background:#fff;white-space:pre-wrap;direction:ltr;text-align:left">ERROR: ${e.message}\n${e.filename || ''}:${e.lineno || ''}</pre>`;
+  });
+  window.addEventListener('unhandledrejection', e => {
+    document.getElementById('app').innerHTML = `<pre style="padding:20px;color:#900;background:#fff;white-space:pre-wrap;direction:ltr;text-align:left">PROMISE ERROR: ${e.reason?.message || e.reason}</pre>`;
+  });
+</script>
+  <script type="module" src="js/admin.js"></script>
 </body>
 </html>
